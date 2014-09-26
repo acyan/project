@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inspector.controllers.SettingsViewController">
+   <children>
+      <GridPane layoutY="23.0" prefHeight="230.0" prefWidth="450.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="118.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="288.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="86.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="182.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="242.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="242.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="242.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="242.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Частота проверки доступа" />
+            <Label text="Частота проверки изменений" GridPane.rowIndex="1" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1">
+               <children>
+                  <ChoiceBox fx:id="statusHourChoiceBox" prefHeight="23.0" prefWidth="55.0" />
+                  <Label prefHeight="20.0" prefWidth="46.0" text="ч">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="statusMinChoiceBox" prefHeight="23.0" prefWidth="60.0" />
+                  <Label prefHeight="20.0" prefWidth="55.0" text="мин">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="statusSecChoiceBox" prefHeight="23.0" prefWidth="57.0" />
+                  <Label alignment="BOTTOM_CENTER" prefHeight="15.0" prefWidth="40.0" text="сек">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="changeField" />
+                  <ChoiceBox fx:id="changesChoiceBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <Label text="Использовать прокси" GridPane.rowIndex="2" />
+            <CheckBox fx:id="proxyCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="IP адрес" GridPane.rowIndex="3" />
+            <Label text="Порт" GridPane.rowIndex="4" />
+            <TextField fx:id="ipField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="portField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <HBox alignment="TOP_CENTER" layoutX="4.0" layoutY="253.0" prefHeight="40.0" prefWidth="391.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="50.0" text="Ок" />
+            <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="64.0" text="Отмена" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

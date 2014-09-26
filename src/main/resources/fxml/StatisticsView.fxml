@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inspector.controllers.StatisticsViewController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Сегодня">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane pannable="true" prefHeight="571.0" prefWidth="900.0" vbarPolicy="ALWAYS">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="897.0">
+                                 <children>
+                                    <BarChart fx:id="chartToday" animated="false" barGap="3.0" categoryGap="2.0" layoutX="7.0" prefHeight="900.0" prefWidth="887.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                                       <xAxis>
+                                          <NumberAxis side="BOTTOM">
+                                             <tickLabelFont>
+                                                <Font size="12.0" />
+                                             </tickLabelFont>
+                                          </NumberAxis>
+                                       </xAxis>
+                                       <yAxis>
+                                          <CategoryAxis side="LEFT" fx:id="xAxis">
+                                             <tickLabelFont>
+                                                <Font size="10.0" />
+                                             </tickLabelFont>
+                                          </CategoryAxis>                               
+                                       </yAxis>
+                                       <padding>
+                                          <Insets left="250.0" />
+                                       </padding>
+                                    </BarChart>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Неделя">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane pannable="true" prefHeight="571.0" prefWidth="900.0" vbarPolicy="ALWAYS">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="897.0">
+                                 <children>
+                                    <BarChart fx:id="chartWeek" animated="false" barGap="3.0" categoryGap="2.0" layoutX="7.0" prefHeight="900.0" prefWidth="887.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                                       <xAxis>
+                                          <NumberAxis side="BOTTOM">
+                                             <tickLabelFont>
+                                                <Font size="12.0" />
+                                             </tickLabelFont>
+                                          </NumberAxis>
+                                       </xAxis>
+                                       <yAxis>
+                                          <CategoryAxis side="LEFT" fx:id="xAxis1">
+                                             <tickLabelFont>
+                                                <Font size="10.0" />
+                                             </tickLabelFont>
+                                          </CategoryAxis>                               
+                                       </yAxis>
+                                       <padding>
+                                          <Insets left="250.0" />
+                                       </padding>
+                                    </BarChart>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Все время">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane pannable="true" prefHeight="571.0" prefWidth="900.0" vbarPolicy="ALWAYS">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="897.0">
+                                 <children>
+                                    <BarChart fx:id="chartAll" animated="false" barGap="3.0" categoryGap="2.0" layoutX="7.0" prefHeight="900.0" prefWidth="887.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                                       <xAxis>
+                                          <NumberAxis side="BOTTOM">
+                                             <tickLabelFont>
+                                                <Font size="12.0" />
+                                             </tickLabelFont>
+                                          </NumberAxis>
+                                       </xAxis>
+                                       <yAxis>
+                                          <CategoryAxis side="LEFT" fx:id="xAxis2">
+                                             <tickLabelFont>
+                                                <Font size="10.0" />
+                                             </tickLabelFont>
+                                          </CategoryAxis>                               
+                                       </yAxis>
+                                       <padding>
+                                          <Insets left="250.0" />
+                                       </padding>
+                                    </BarChart>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="380.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inspector.controllers.SiteEditDialogController">
+   <children>
+      <GridPane layoutX="8.0" layoutY="23.0" prefHeight="320.0" prefWidth="480.0" vgap="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.0" minWidth="10.0" prefWidth="167.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="297.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="21.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="210.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="287.0" minHeight="10.0" prefHeight="231.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="277.0" minHeight="1.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Адрес сайта" />
+            <Label text="Проверять изменения" GridPane.rowIndex="1" />
+            <TextField fx:id="addressField" GridPane.columnIndex="1" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                <fx:define>
+                    <ToggleGroup fx:id="changeToggleGroup"/>
+                </fx:define>
+                <children>
+                  <RadioButton fx:id="yesRadioButton" mnemonicParsing="false" text="Да" toggleGroup="$changeToggleGroup"/>
+                  <RadioButton fx:id="noRadioButton" mnemonicParsing="false" text="Нет" toggleGroup="$changeToggleGroup" />
+               </children>
+            </HBox>
+            <Label text="Список страниц" GridPane.rowIndex="2" />
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="pageName"/>                  
+                  <HBox prefHeight="33.0" prefWidth="297.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Добавить" onAction="#handleAdd"/>
+                        <Button mnemonicParsing="false" text="Удалить" onAction="#handleDelete"/>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <TableView fx:id="pagesList" prefHeight="215.0" prefWidth="297.0" >
+                        <columns>
+                           <TableColumn fx:id="pageAddressColumn" prefWidth="125.0" text="Адрес" />
+                           <TableColumn fx:id="pageStatusColumn" prefWidth="83.0" text="Статус" />
+                         </columns>
+                  </TableView>
+
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+    <HBox layoutX="197.1875" layoutY="241.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+    <children><Button layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleOk" prefWidth="90.0" text="OK" /><Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="90.0" text="Cancel" />
+    </children>
+    </HBox>
+   </children>
+</AnchorPane>
